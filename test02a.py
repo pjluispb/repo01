@@ -3,7 +3,8 @@ import pandas as pd
 import streamlit as st
 # Creating the dataframe
 st.write('Lectura del csv')
-df = pd.read_csv("Prondanmin23B.csv", index_col='cedula')
+url = 'https://raw.githubusercontent.com/pjluispb/repo01/main/Prondanmin23B.csv?token=GHSAT0AAAAAAB6JHUBR7JCSGL4MM6WMAHESY7UD6IA'
+df = pd.read_csv(url, index_col='cedula')
 #---print(df.head(10))
 st.write(df)
 ###print(df.dtypes)
