@@ -2,10 +2,10 @@
 import pandas as pd
 import streamlit as st
 # Creating the dataframe
-####df = pd.read_csv("Prondanmin23.csv", index_col='cedula')
+st.write('Lectura del csv')
 df = pd.read_csv("Prondanmin23B.csv", index_col='cedula')
 #---print(df.head(10))
-df
+st.write(df)
 ###print(df.dtypes)
 # Agrega fila al principio del df
 #newRow = pd.DataFrame({'correo':'bettymar@ro.ck','Apellidos':'Marmol','Nombres':'Betty','cedula':int(7875554),'Teléfono':'0274 2447575','Distrito':'Andino','catAsp':'S/A','modalidad':'S/A','STATUS':'S/A'}, index=[0])
