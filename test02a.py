@@ -1,32 +1,18 @@
 # importing pandas as pd
 import pandas as pd
 import streamlit as st
-# Creating the dataframe
+# ----------------------------------------
 st.write('Lectura del csv')
-url = 'https://raw.githubusercontent.com/pjluispb/repo01/main/Prondanmin23B.csv?token=GHSAT0AAAAAAB6JHUBR7JCSGL4MM6WMAHESY7UD6IA'
-df = pd.read_csv(url, index_col='cedula')
-#---print(df.head(10))
+newurl = 'https://raw.githubusercontent.com/pjluispb/miscvs/main/Prondanmin23.csv'
+df = pd.read_csv(newurl, index_col='cedula')
 st.write(df)
-###print(df.dtypes)
-# Agrega fila al principio del df
-#newRow = pd.DataFrame({'correo':'bettymar@ro.ck','Apellidos':'Marmol','Nombres':'Betty','cedula':int(7875554),'Teléfono':'0274 2447575','Distrito':'Andino','catAsp':'S/A','modalidad':'S/A','STATUS':'S/A'}, index=[0])
-#df = pd.concat([newRow, df]).reset_index(drop = True)
-# df.head(5)
-#print(df.head(5))
-# # Graba el df a un csv
-#df.to_csv('Prondanmin23B.csv', encoding='utf-8', index=False)
 try:
     first = df.loc[5125570]
-    
 except:
-    #print('cedula No existe')
     st.write('cedula no existe')
 else:
-    #print(first)
-    print('cedula existe')
+    st.write('cedula existe')
     st.write(first)
-# second = df.loc[7788]
 
-# print(second)
  
 
